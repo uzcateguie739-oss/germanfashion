@@ -4,52 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>German Fashion</title>
+    <link rel="icon" href="Sin título-1.png" type="icon">
     <link rel="stylesheet" href="style2.css">
+    <script src="imagen.js"></script>
 </head>
 <body>
     <div class="menu">
-
-        <a href="index.html">incio</a>
+        <img src="Sin título-1.png" alt="" class="logo">
+        <a href="inicio.html">incio</a>
         <a href="catalogo.html">catalogo</a>
     </div>
-    <div class="modelos">
-        <div class="modelo">
-            <img src="modelo1.jpg" alt="">
-            <p>modelo <br>talla
-            </p>
-        <div class="compra"><a href="http://wa.me/+584241715961?text=me interasa el modelo 1">comprar</a></div>
-        </div>
-                <div class="modelo">
-            <img src="modelo1.jpg" alt="">
-            <p>modelo <br>talla
-            </p>
-        <div class="compra"><a href="http://wa.me/+584241715961?text=me interasa el modelo 1">comprar</a></div>
-        </div>
-                        <div class="modelo">
-            <img src="modelo1.jpg" alt="">
-            <p>modelo <br>talla
-            </p>
-        <div class="compra"><a href="http://wa.me/+584241715961?text=me interasa el modelo 1">comprar</a></div>
-        </div>
-        <div class="modelo">
-            <img src="modelo1.jpg" alt="">
-            <p>modelo <br>talla
-            </p>
-        <div class="compra"><a href="http://wa.me/+584241715961?text=me interasa el modelo 1">comprar</a></div>
-        </div>
-        <div class="modelo">
-            <img src="modelo1.jpg" alt="">
-            <p>modelo <br>talla
-            </p>
-        <div class="compra"><a href="http://wa.me/+584241715961?text=me interasa el modelo 1">comprar</a></div>
-        </div>
-        <div class="modelo">
-            <img src="modelo1.jpg" alt="">
-            <p>modelo <br>talla
-            </p>
-        <div class="compra"><a href="http://wa.me/+584241715961?text=me interasa el modelo 1">comprar</a></div>
+<div id="galeria-principal">
+    <img src="modelo1.jpg" class="imagen-galeria" data-modelo="Vestido Rojo Elegante" data-talla="S, M, L, XL" data-imagen-principal="modelo1.jpg" alt="Vestido Rojo">
+    <img src="modelo1.jpg" class="imagen-galeria" data-modelo="Vestido Rojo Elegante" data-talla="S, M, L, XL" data-imagen-principal="modelo1.jpg" alt="Vestido Rojo">
+    <img src="modelo1.jpg" class="imagen-galeria" data-modelo="Vestido Rojo Elegante" data-talla="S, M, L, XL" data-imagen-principal="modelo1.jpg" alt="Vestido Rojo">
+    <img src="modelo1.jpg" class="imagen-galeria" data-modelo="Vestido Rojo Elegante" data-talla="S, M, L, XL" data-imagen-principal="modelo1.jpg" alt="Vestido Rojo">
+    <img src="GERMA FASHION.png" class="imagen-galeria" data-modelo="Vestido Rojo Elegante" data-talla="S, M, L, XL" data-imagen-principal="GERMA FASHION.png" alt="Vestido Rojo">
+    <img src="modelo1.jpg" class="imagen-galeria" data-modelo="Vestido Rojo Elegante" data-talla="S, M, L, XL" data-imagen-principal="modelo1.jpg" alt="Vestido Rojo">
+    <img src="modelo1.jpg" class="imagen-galeria" data-modelo="Vestido Rojo Elegante" data-talla="S, M, L, XL" data-imagen-principal="modelo1.jpg" alt="Vestido Rojo">
+    <img src="GERMA FASHION.png" class="imagen-galeria" data-modelo="Vestido Rojo Elegante" data-talla="S, M, L, XL" data-imagen-principal="GERMA FASHION.png" alt="Vestido Rojo">
+    </div>
+
+
+<div id="modal-producto" class="cubierta-modal">
+    <div class="contenido-modal-simple">
+        <button class="boton-cerrar">&times;</button>
+
+        <div class="contenedor-modal-simple">
+            <div class="seccion-imagen-modal">
+                <img id="imagen-principal" src="" alt="Imagen del Producto">
+            </div>
+
+            <div class="seccion-informacion-simple">
+                <h2 id="modelo-producto">Nombre del Modelo</h2>
+                
+                <p><strong>Talla Disponible:</strong> <span id="talla-producto"></span></p>
+
+                <button id="boton-comprar">COMPRAR AHORA</button>
+            </div>
         </div>
     </div>
+</div>
 </body>
-
 </html>

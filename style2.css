@@ -1,18 +1,25 @@
 body {
     padding: 10px;
+
 }
 .logo {
     background: black;
     padding: 10px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    margin-right: 400px;
 }
 .menu {
     padding: 20px;
     text-align: right;
+    display: flex;
+    align-items: center;
 
 }
 .menu a {
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: bolder;
     background-color: rgb(255, 255, 255);
     padding: 10px;
     color: black;
@@ -24,58 +31,122 @@ a {
 
 }
 .menu a:hover {
-    background-color: rgb(49, 49, 49);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 20px 5px rgb(0, 0, 0);
 }
-.modelos {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-}
-.modelo {
-    text-align: center;
-    margin: 10px;
+#galeria-principal {
+    display: flex;
+    justify-content: center; /* Centra las imágenes de la galería */
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
 }
-img { 
-    width: 200px;
-    border-radius: 10px;
-
+.imagen-galeria {
+    height: 200px;
+    cursor: pointer;
 }
-.compra {
-    font-size: 20px;
-    text-decoration: none;
-    padding: 10px;
 
-}
-.compra a {
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    padding: 10px;
+/* ------------------------------------- */
+/* ESTILOS DEL MODAL */
+/* ------------------------------------- */
 
+.cubierta-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center; /* Centra el contenido del modal */
+    align-items: center;
 }
-.compra :hover {
-    background-color: rgb(0, 0, 0);
+
+.contenido-modal-simple {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%; 
+    max-width: 800px;
+    position: relative;
+}
+
+.boton-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.contenedor-modal-simple {
+    display: flex;
+    gap: 30px; 
+    flex-wrap: wrap; /* Para diseño responsive */
+}
+
+.seccion-imagen-modal {
+    flex: 1.5; /* La imagen toma más espacio */
+    max-width: 40%;
+}
+.seccion-informacion-simple {
+    flex: 1; /* La info toma menos espacio */
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón hacia abajo */
+}
+
+#imagen-principal {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+#boton-comprar {
+    background-color: #28a745; /* Verde de compra */
     color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
 }
 
-@media ( max-width: 360px) {
 
-    .modelos {
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        justify-content: center;
-    }
+@media ( max-width: 400px) {
+
     .menu a { 
         font-size: 20px;
         text-align: center;
     }
+    .logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 50px;
+    }
     .menu a :active {
         color: white;
         background-color:black;
-    } 
-    img {
+    }
+    .contenedor-modal-simple {
+        margin: 0%;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .seccion-imagen-modal ,.seccion-informacion-simple {
         width: 100%;
-
+        min-width: unset;
+    }
+    .boton-cerrar {
+        font-size: 24px;
+        top: 5px;
+        right: 15px;
     }
 }
