@@ -1,0 +1,29 @@
+body {
+    padding: 10px;
+}
+.logo {
+    background: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+.menu {
+    padding: 20px;
+    text-align: right;
+
+}
+.menu a {
+    font-size: 30px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    color: black;
+    margin: 10px;
+     border-radius: 20px;
+}
+a {
+    text-decoration: none;
+
+}
+.menu a:hover {
+    background-color: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
+}
