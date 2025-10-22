@@ -1,0 +1,124 @@
+/* ------------------------------------- */
+/* ESTILOS BASE DEL MENÚ */
+/* ------------------------------------- */
+
+.menu {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mantiene logo/nombre a la izquierda y enlaces a la derecha */
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* En este orden va a la IZQUIERDA */
+}
+
+.logo {
+    background: black;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu-links {
+    display: flex; /* Muestra los enlaces horizontalmente en PC */
+    align-items: center;
+}
+
+.menu-links a {
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 15px;
+    color: black;
+    margin: 0 5px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none; 
+}
+
+.menu-links a:hover {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+    background-color: #eee;
+}
+
+/* Ocultar el botón hamburguesa por defecto en PC */
+.menu-toggle {
+    display: none;
+}
+
+/* ------------------------------------- */
+/* MEDIA QUERY - MÓVIL (Menú Hamburguesa) */
+/* ------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .menu {
+        padding: 10px;
+        position: relative;
+    }
+    
+    .logo-container {
+        /* Ajuste de tamaño del logo/nombre en móvil */
+        order: -1; /* Asegura que el logo vaya a la izquierda (inicio) */
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+    .brand-name {
+        font-size: 18px; /* Tamaño más pequeño para móvil */
+    }
+
+    /* Mostrar botón hamburguesa */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+
+    /* Ocultar enlaces de la barra principal */
+    .menu-links {
+        display: none; /* Oculto por defecto */
+        position: absolute;
+        top: 60px; 
+        right: 0; /* Lo anclamos a la derecha */
+        width: 100%; /* Ocupa todo el ancho */
+        background-color: #f8f8f8;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        flex-direction: column; 
+        z-index: 900; 
+        text-align: right; /* Alineamos los enlaces a la derecha */
+        padding: 10px 0;
+    }
+
+    /* Estilos de los enlaces en el desplegable */
+    .menu-links a {
+        display: block;
+        margin: 5px 20px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    
+    /* Clase para mostrar el menú (gestionada por JS) */
+    .menu-links.active {
+        display: flex;
+    }
+}

@@ -1,49 +1,37 @@
+/* Estilos generales que no son del menú */
 body {
     padding: 10px;
-
-}
-.logo {
-    background: black;
-    padding: 10px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 400px;
-}
-.menu {
-    padding: 20px;
-    text-align: right;
-    display: flex;
-    align-items: center;
-
-}
-.menu a {
-    font-size: 25px;
-    font-weight: bolder;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    color: black;
-    margin: 10px;
-     border-radius: 20px;
+    margin: 0;
+    font-family: sans-serif;
 }
 a {
     text-decoration: none;
+    color: inherit;
+}
 
-}
-.menu a:hover {
-    color: rgb(0, 0, 0);
-    box-shadow: 0 0 20px 5px rgb(0, 0, 0);
-}
+/* ------------------------------------- */
+/* ESTILOS DE GALERÍA (manteniendo la lógica de width/height) */
+/* ------------------------------------- */
 #galeria-principal {
     display: flex;
-    justify-content: center; /* Centra las imágenes de la galería */
+    justify-content: center; 
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 40px 20px; 
 }
+
+/* ESTILO PARA PC (Por defecto) */
 .imagen-galeria {
     height: 200px;
+    width: auto; 
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: transform 0.3s;
+}
+.imagen-galeria:hover {
+    transform: scale(1.05);
 }
 
 /* ------------------------------------- */
@@ -51,7 +39,7 @@ a {
 /* ------------------------------------- */
 
 .cubierta-modal {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed; 
     z-index: 1000; 
     left: 0;
@@ -59,16 +47,16 @@ a {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.85);
-    justify-content: center; /* Centra el contenido del modal */
+    justify-content: center; 
     align-items: center;
 }
 
 .contenido-modal-simple {
     background-color: white;
-    padding: 20px;
+    padding: 30px; 
     border-radius: 8px;
-    width: 80%; 
-    max-width: 800px;
+    width: 90%; 
+    max-width: 900px; 
     position: relative;
 }
 
@@ -80,24 +68,25 @@ a {
     cursor: pointer;
     background: none;
     border: none;
+    color: #333;
 }
 
 .contenedor-modal-simple {
     display: flex;
-    gap: 30px; 
-    flex-wrap: wrap; /* Para diseño responsive */
+    gap: 40px; 
+    flex-wrap: wrap; 
 }
 
 .seccion-imagen-modal {
-    flex: 1.5; /* La imagen toma más espacio */
-    max-width: 40%;
+    flex: 2; 
+    max-width: 50%;
 }
 .seccion-informacion-simple {
-    flex: 1; /* La info toma menos espacio */
-    min-width: 200px;
+    flex: 1; 
+    min-width: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empuja el botón hacia abajo */
+    justify-content: space-between; 
 }
 
 #imagen-principal {
@@ -107,9 +96,9 @@ a {
 }
 
 #boton-comprar {
-    background-color: #28a745; /* Verde de compra */
+    background-color: #28a745; 
     color: white;
-    padding: 15px;
+    padding: 0; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -117,36 +106,41 @@ a {
     width: 100%;
 }
 
+#boton-comprar a {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    color: white; 
+    font-weight: bold;
+}
 
-@media ( max-width: 400px) {
 
-    .menu a { 
-        font-size: 20px;
-        text-align: center;
-    }
-    .logo {
-        width: 30px;
-        height: 30px;
-        margin-right: 50px;
-    }
-    .menu a :active {
-        color: white;
-        background-color:black;
-    }
+/* ------------------------------------- */
+/* MEDIA QUERY - MÓVIL (Reglas de Galería y Modal) */
+/* ------------------------------------- */
+
+@media ( max-width: 600px) { 
+
     .contenedor-modal-simple {
-        margin: 0%;
         flex-direction: column;
         gap: 15px;
-        justify-content: center;
         align-items: center;
     }
     .seccion-imagen-modal ,.seccion-informacion-simple {
         width: 100%;
+        max-width: none;
         min-width: unset;
     }
     .boton-cerrar {
         font-size: 24px;
         top: 5px;
         right: 15px;
+    }
+    
+    /* Regla móvil para la imagen de la galería */
+    .imagen-galeria {
+        width: 100%;    
+        height: auto;   
+        object-fit: contain; 
     }
 }
