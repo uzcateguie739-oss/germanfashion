@@ -22,7 +22,7 @@ a {
 
 /* ESTILO PARA PC (Por defecto) */
 .imagen-galeria {
-    height: 200px;
+    height: 300px;
     width: auto; 
     object-fit: cover; 
     border-radius: 8px;
@@ -39,6 +39,7 @@ a {
 /* ------------------------------------- */
 
 .cubierta-modal {
+    /* ... (se mantiene igual: posición fija, z-index, background) ... */
     display: none; 
     position: fixed; 
     z-index: 1000; 
@@ -49,17 +50,26 @@ a {
     background-color: rgba(0, 0, 0, 0.85);
     justify-content: center; 
     align-items: center;
+    /* CLAVE: Si el contenido es más alto que la pantalla, permite el scroll */
+    overflow-y: auto; 
 }
 
 .contenido-modal-simple {
     background-color: white;
     padding: 30px; 
     border-radius: 8px;
-    width: 90%; 
-    max-width: 900px; 
+    
+    /* 🔥 CORRECCIÓN CLAVE PARA PC: Reducir el max-width */
+    width: 95%; /* Usar un 95% del espacio disponible */
+    max-width: 700px; /* Reducido de 900px a 700px para mayor seguridad */
+    
     position: relative;
+    
+    /* CLAVE: Asegura que el modal no sea más alto que la ventana */
+    max-height: 95vh; /* Máximo 95% de la altura de la vista (viewport height) */
+    overflow-y: auto; /* Permite scroll interno si el contenido es demasiado largo */
+    margin: 20px auto; /* Agrega margen superior/inferior en caso de scroll */
 }
-
 .boton-cerrar {
     position: absolute;
     top: 10px;
@@ -122,22 +132,22 @@ a {
 @media ( max-width: 600px) { 
 
     .contenedor-modal-simple {
+        /* ... (se mantiene igual: flex-direction: column) ... */
         flex-direction: column;
         gap: 15px;
         align-items: center;
     }
+    
     .seccion-imagen-modal ,.seccion-informacion-simple {
         width: 100%;
         max-width: none;
         min-width: unset;
-    }
-    .boton-cerrar {
-        font-size: 24px;
-        top: 5px;
-        right: 15px;
+        /* 🔥 CLAVE para Móvil: Reducir el padding interno para evitar desbordamiento */
+        padding: 0 10px; 
     }
     
-    /* Regla móvil para la imagen de la galería */
+    /* ... (El resto de estilos de móvil se mantienen) ... */
+    
     .imagen-galeria {
         width: 100%;    
         height: auto;   
