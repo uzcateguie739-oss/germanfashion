@@ -3,31 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>German Fashion</title>
+    <title>Inicio | German Fashion</title>
     <link rel="icon" href="Sin título-1.png" type="icon">
     
     <link rel="stylesheet" href="menu.css"> 
-    <link rel="stylesheet" href="style2.css"> 
-    
     <script src="menu.js"></script> 
-    <script src="imagen.js"></script>
+    
+    <link rel="stylesheet" href="inicio.css"> 
+    <script src="inicio.js"></script> 
 </head>
 <body>
     
     <div class="menu">
-        
         <div class="logo-container">
             <img src="Sin título-1.png" alt="Logo German Fashion" class="logo">
             <span class="brand-name">GERMA FASHION</span>
         </div>
-        
         <button class="menu-toggle" id="menu-toggle">☰</button>
-
         <div class="menu-links" id="menu-links">
-            <a href="inicio.html">Inicio</a>
+            <a href="index.html">Inicio</a>
             <a href="catalogo.html">Catálogo</a>
         </div>
-
     </div>
+
+    <header class="hero-video-container">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="tu_video.mp4" type="video/mp4">
+            Tu navegador no soporta el tag de video.
+        </video>
+        <div class="hero-content">
+            <h1>NUEVA COLECCIÓN: Estilo Europeo para ti.</h1>
+            <a href="catalogo.html" class="cta-button">Ver Catálogo Completo</a>
+        </div>
+    </header>
+
+    <section class="social-links">
+        <div class="social-block whatsapp-block">
+            <a href="https://wa.me/+584141715961" target="_blank">
+                <h2>WhatsApp 💬</h2>
+                <p>¡Chatea con nosotros! Compra fácil y rápido.</p>
+            </a>
+        </div>
+        <div class="social-block instagram-block">
+            <a href="URL_TU_INSTAGRAM" target="_blank">
+                <h2>Instagram ✨</h2>
+                <p>Descubre outfits y looks de moda.</p>
+            </a>
+        </div>
+        <div class="social-block tiktok-block">
+            <a href="URL_TU_TIKTOK" target="_blank">
+                <h2>TikTok 🤳</h2>
+                <p>Videos de prendas y cómo combinarlas.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="featured-products-section">
+        <h2>🔥 Nuestros Más Vendidos 🔥</h2>
+        <div class="mini-galeria-inicio" id="mini-galeria-inicio">
+             <a href="catalogo.html"><img src="modelo1.jpg" alt="Vestido Rojo" class="miniatura-producto"></a>
+            <a href="catalogo.html"><img src="GERMA FASHION.png" alt="Chaqueta Negra" class="miniatura-producto"></a>
+            <a href="catalogo.html"><img src="modelo1.jpg" alt="Conjunto Verano" class="miniatura-producto"></a>
+            <a href="catalogo.html"><img src="modelo1.jpg" alt="Blusa Estampada" class="miniatura-producto"></a>
+        </div>
+        <a href="catalogo.html" class="secondary-cta">Ver todos los productos ></a>
+    </section>
+
+    <section class="value-proposition">
+        <h2>¿Por qué elegir German Fashion?</h2>
+        <div class="value-grid">
+            <div>
+                <h3>Calidad Premium 🧵</h3>
+                <p>Prendas duraderas con acabados inspirados en la moda europea.</p>
+            </div>
+            <div>
+                <h3>Atención Rápida 🚀</h3>
+                <p>Soporte inmediato por WhatsApp para todas tus preguntas y pedidos.</p{</p>
+            </div>
+            <div>
+                <h3>Envíos Seguros 📦</h3>
+                <p>Tu moda llega a tus manos de forma rápida y confiable.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 German Fashion. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

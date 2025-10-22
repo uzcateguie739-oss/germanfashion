@@ -1,0 +1,213 @@
+/* Asegurar que el body no tenga padding o margin extra */
+body {
+    margin-top: 0;
+    padding-top: 0;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ------------------------------------- */
+/* 1. SECCIÓN HERO (Video) */
+/* ------------------------------------- */
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    filter: brightness(0.6); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #f0c330; 
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffda6a;
+}
+
+/* ------------------------------------- */
+/* 2. BLOQUES DE CONTACTO Y REDES SOCIALES */
+/* ------------------------------------- */
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    gap: 20px;
+    background-color: #eee;
+}
+
+.social-block {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    min-width: 150px;
+}
+
+.social-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-block a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.whatsapp-block { background-color: #dcf8c6; }
+.instagram-block { background-color: #f7d7e4; }
+.tiktok-block { background-color: #e6e6e6; }
+
+.social-block h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+/* ------------------------------------- */
+/* 3. MINI-GALERÍA DESTACADA */
+/* ------------------------------------- */
+.featured-products-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.mini-galeria-inicio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Estilo para las imágenes de la mini-galería */
+.miniatura-producto {
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.miniatura-producto:hover {
+    transform: scale(1.05);
+}
+
+.secondary-cta {
+    display: inline-block;
+    margin-top: 30px;
+    color: #555;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ------------------------------------- */
+/* 4. BLOQUE DE CONFIANZA Y PVU */
+/* ------------------------------------- */
+.value-proposition {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.value-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.value-grid > div {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.value-grid h3 {
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* ------------------------------------- */
+/* FOOTER */
+/* ------------------------------------- */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* ------------------------------------- */
+/* MEDIA QUERIES PARA MÓVIL */
+/* ------------------------------------- */
+@media (max-width: 600px) {
+    .hero-video-container {
+        height: 50vh; 
+    }
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    
+    .social-links {
+        flex-direction: column;
+    }
+
+    .value-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .miniatura-producto {
+        width: 100%;
+        height: auto;
+    }
+}
