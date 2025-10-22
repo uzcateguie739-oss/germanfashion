@@ -66,7 +66,7 @@ a {
     position: relative;
     
     /* CLAVE: Asegura que el modal no sea más alto que la ventana */
-    max-height: 95vh; /* Máximo 95% de la altura de la vista (viewport height) */
+    max-height: 70vh; /* Máximo 95% de la altura de la vista (viewport height) */
     overflow-y: auto; /* Permite scroll interno si el contenido es demasiado largo */
     margin: 20px auto; /* Agrega margen superior/inferior en caso de scroll */
 }
@@ -90,6 +90,7 @@ a {
 .seccion-imagen-modal {
     flex: 2; 
     max-width: 50%;
+    text-align: center;
 }
 .seccion-informacion-simple {
     flex: 1; 
@@ -100,7 +101,7 @@ a {
 }
 
 #imagen-principal {
-    width: 100%;
+    width: 60%;
     height: auto;
     border-radius: 4px;
 }
@@ -135,21 +136,19 @@ a {
         /* ... (se mantiene igual: flex-direction: column) ... */
         flex-direction: column;
         gap: 15px;
-        align-items: center;
+        height: 100%;
     }
     
     .seccion-imagen-modal ,.seccion-informacion-simple {
         width: 100%;
         max-width: none;
         min-width: unset;
-        /* 🔥 CLAVE para Móvil: Reducir el padding interno para evitar desbordamiento */
         padding: 0 10px; 
+        align-items: center;
+        justify-content: center;
     }
-    
-    /* ... (El resto de estilos de móvil se mantienen) ... */
-    
     .imagen-galeria {
-        width: 100%;    
+        width: 100%;
         height: auto;   
         object-fit: contain; 
     }
